@@ -1,7 +1,9 @@
-LibriSpeech/ 
-.ipynb_checkpoints/
+.idea
+.ipynb_checkpoints
 .DS_Store
-__pycache__/
+__pycache__
+results
+data
 *.tar.gz
 *.pyc
 *.json
