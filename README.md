@@ -4,7 +4,7 @@
 
 ![ASR Pipeline](./images/pipeline.png)
 
-This project develops a recurrent neural network that functions as part of an end-to-end (A)utomatic (S)peech (R)ecognition pipeline. It converts raw audio from [LibriSpeech](https://www.openslr.org/12) data into feature representations and uses them to generate transcribed text.
+This project develops a recurrent neural network that functions as part of an end-to-end (A)utomatic (S)peech (R)ecognition pipeline. It converts raw audio from [LibriSpeech](https://www.openslr.org/12) ASR corpus into Spectrogram or MFCC feature representations and uses them to generate transcribed text automatically.
 
 ### Requirements
 
