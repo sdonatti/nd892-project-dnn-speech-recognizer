@@ -17,7 +17,7 @@ This project develops a recurrent neural network that functions as part of an en
 - data
   - LibriSpeech
     - [dev-clean](https://www.openslr.org/resources/12/dev-clean.tar.gz)
-    - [test-clean](https://www.openslr.org/resources/12/dev-clean.tar.gz)
+    - [test-clean](https://www.openslr.org/resources/12/test-clean.tar.gz)
 
 ### Set-up
 
