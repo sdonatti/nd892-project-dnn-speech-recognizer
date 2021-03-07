@@ -43,7 +43,7 @@ python create_desc_json.py data/LibriSpeech/test-clean valid_corpus.json
 
 Launch the project Jupyter Notebooks
 ```
-jupyter notebook
+jupyter notebook vui_notebook.ipynb
 ```
 
 ### License
