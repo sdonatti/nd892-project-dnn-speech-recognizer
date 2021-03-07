@@ -41,7 +41,7 @@ python create_desc_json.py data/LibriSpeech/dev-clean train_corpus.json
 python create_desc_json.py data/LibriSpeech/test-clean valid_corpus.json
 ```
 
-Launch the project Jupyter Notebooks
+Launch the project Jupyter Notebook
 ```
 jupyter notebook vui_notebook.ipynb
 ```
