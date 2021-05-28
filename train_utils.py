@@ -10,7 +10,7 @@ from keras.models import Model
 from keras.optimizers import SGD
 
 from data_generator import AudioGenerator
-
+from keras_tqdm import TQDMNotebookCallback
 
 def ctc_lambda_func(args):
     y_pred, labels, input_length, label_length = args
@@ -68,7 +68,7 @@ def train_model(input_to_softmax,
     hist = model.fit_generator(generator=audio_gen.next_train(), steps_per_epoch=steps_per_epoch,
                                epochs=epochs, validation_data=audio_gen.next_valid(),
                                validation_steps=validation_steps,
-                               callbacks=[checkpointer], verbose=verbose)
+                               callbacks=[TQDMNotebookCallback(), checkpointer], verbose=verbose)
     # save model loss
     with open(os.path.join('results', pickle_path), 'wb') as f:
         pickle.dump(hist.history, f)
