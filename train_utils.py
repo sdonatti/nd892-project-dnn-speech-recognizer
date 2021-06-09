@@ -65,10 +65,11 @@ def train_model(input_to_softmax,
     # add checkpointer
     checkpointer = ModelCheckpoint(filepath=os.path.join('results', save_model_path), verbose=0)
     # train the model
+    callbacks = [TQDMNotebookCallback(), checkpointer] if verbose < 0 else [checkpointer]
     hist = model.fit_generator(generator=audio_gen.next_train(), steps_per_epoch=steps_per_epoch,
                                epochs=epochs, validation_data=audio_gen.next_valid(),
                                validation_steps=validation_steps,
-                               callbacks=[TQDMNotebookCallback(), checkpointer], verbose=verbose)
+                               callbacks=callbacks, verbose=verbose)
     # save model loss
     with open(os.path.join('results', pickle_path), 'wb') as f:
         pickle.dump(hist.history, f)
